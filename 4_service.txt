@@ -1,0 +1,19 @@
+@Service
+public class PessoaService {
+    @Autowired
+    private PessoaRepository pessoaRepository;
+
+    @Autowired
+    private EnderecoRepository enderecoRepository;
+
+    // Implemente métodos para criar, editar, consultar e listar pessoas
+    // Implemente métodos para criar, listar endereços e definir o endereço principal de uma pessoa
+}
+
+@Service
+public class EnderecoService {
+    @Autowired
+    private EnderecoRepository enderecoRepository;
+
+    // Implemente métodos para criar e listar endereços de uma pessoa
+}

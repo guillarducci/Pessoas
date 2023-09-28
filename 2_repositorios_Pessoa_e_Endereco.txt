@@ -1,0 +1,8 @@
+@Repository
+public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
+}
+
+@Repository
+public interface EnderecoRepository extends JpaRepository<Endereco, Long> {
+    List<Endereco> findByPessoaId(Long pessoaId);
+}

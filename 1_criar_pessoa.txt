@@ -1,0 +1,31 @@
+@Entity
+public class Pessoa {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+    private LocalDate dataNascimento;
+
+    @OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL)
+    private List<Endereco> enderecos = new ArrayList<>();
+
+    // Getters e Setters
+}
+
+@Entity
+public class Endereco {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String logradouro;
+    private String cep;
+    private String numero;
+    private String cidade;
+    private boolean principal;
+
+    @ManyToOne
+    @JoinColumn(name = "pessoa_id")
+    private Pessoa pessoa;
+
+    // Getters e Setters
+}

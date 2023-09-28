@@ -1,0 +1,19 @@
+@RestController
+@RequestMapping("/api/pessoas")
+public class PessoaController {
+    @Autowired
+    private PessoaService pessoaService;
+
+    // Implemente endpoints para criar, editar, consultar e listar pessoas
+    // Implemente endpoints para criar, listar endereços e definir o endereço principal de uma pessoa
+}
+
+@RestController
+@RequestMapping("/api/enderecos")
+public class EnderecoController {
+    @Autowired
+    private EnderecoService enderecoService;
+
+    // Implemente endpoints para criar e listar endereços de uma pessoa
+}
+ 
